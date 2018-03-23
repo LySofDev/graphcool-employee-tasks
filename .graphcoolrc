@@ -1,0 +1,3 @@
+targets:
+  employee-tasks: shared-us-west-2/cjf4c8o3e7xy70133kcooc3ui
+  default: employee-tasks

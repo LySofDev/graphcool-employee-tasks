@@ -1,11 +1,16 @@
 type Employee @model {
   id: ID! @isUnique
   name: String! @isUnique
-  tasks: [Task]! @relation(name: "EmployeeTasks")
+  tasks: [Task!]! @relation(name: "EmployeeTasks")
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
 
 type Task @model {
   id: ID! @isUnique
   description: String!
+  completed: Boolean @defaultValue(value: "false")
   employee: Employee! @relation(name: "EmployeeTasks")
+  createdAt: DateTime!
+  updatedAt: DateTime!
 }
