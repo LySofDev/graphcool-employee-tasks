@@ -1,0 +1,11 @@
+type Employee @model {
+  id: ID! @isUnique
+  name: String! @isUnique
+  tasks: [Task]! @relation(name: "EmployeeTasks")
+}
+
+type Task @model {
+  id: ID! @isUnique
+  description: String!
+  employee: Employee! @relation(name: "EmployeeTasks")
+}

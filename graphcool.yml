@@ -1,0 +1,60 @@
+types: ./types.graphql
+
+
+permissions:
+  - operation: "*"
+
+
+functions:
+
+  employees:
+    handler:
+      code: src/employees/index.js
+    type: resolver
+    schema: src/employees/index.graphql
+  employee:
+    handler:
+      code: src/employees/show.js
+    type: resolver
+    schema: src/employees/show.graphql
+  createEmployee:
+    handler:
+      code: src/employees/create.js
+    type: resolver
+    schema: src/employees/create.graphql
+  updateEmployee:
+    handler:
+      code: src/employees/update.js
+    type: resolver
+    schema: src/employees/update.graphql
+  destroyEmployee:
+    handler:
+      code: src/employees/destroy.js
+    type: resolver
+    schema: src/employees/destroy.graphql
+
+  tasks:
+    handler:
+      code: src/tasks/index.js
+    type: resolver
+    schema: src/tasks/index.graphql
+  task:
+    handler:
+      code: src/tasks/show.js
+    type: resolver
+    schema: src/tasks/show.graphql
+  createTask:
+    handler:
+      code: src/tasks/create.js
+    type: resolver
+    schema: src/tasks/create.graphql
+  updateTask:
+    handler:
+      code: src/tasks/update.js
+    type: resolver
+    schema: src/tasks/update.graphql
+  destroyTask:
+    handler:
+      code: src/tasks/destroy.js
+    type: resolver
+    schema: src/tasks/destroy.graphql
